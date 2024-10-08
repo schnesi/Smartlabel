@@ -1,4 +1,4 @@
-package ch.schnes.smartlabel.client;
+package ch.schnes.smartlabel.client.control;
 
 import java.awt.Component;
 import java.awt.Dimension;
