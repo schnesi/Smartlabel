@@ -4,7 +4,7 @@ import ch.schnes.smartlabel.MQTTClient;
 import ch.schnes.smartlabel.Observer;
 import ch.schnes.smartlabel.client.*;
 import ch.schnes.smartlabel.client.mainmodel.ClientMainModel;
-import ch.schnes.smartlabel.client.mainmodel.GetOrderModel;
+import ch.schnes.smartlabel.client.mainmodel.OrderModel;
 
 import java.io.FileInputStream;
 import java.util.Properties;
@@ -89,7 +89,7 @@ public class ClientController implements Observer {
 			{"Storage", "Storage"},
 			{"qty", 1}
 		};
-		ClientMainModel mainModel = new GetOrderModel(data, this);
+		ClientMainModel mainModel = new OrderModel(data, this);
 		view.setMainView(mainModel.getPanel());
 	}
 	

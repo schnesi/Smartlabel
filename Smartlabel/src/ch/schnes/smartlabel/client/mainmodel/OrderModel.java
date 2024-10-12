@@ -12,18 +12,15 @@ import ch.schnes.smartlabel.client.control.ClientController;
 /**
  * Shows the and save the changed order data.
  */
-public class GetOrderModel implements ClientMainModel {
+public class OrderModel implements ClientMainModel {
 	private JPanel panel;
 	private JTable table;
-	private ClientController controller;
-	
 	/**
 	 * Create the panel
 	 * @param data
 	 * @param controller
 	 */
-	public GetOrderModel(Object[][] data, ClientController controller) {
-		this.controller = controller;
+	public OrderModel(Object[][] data, ClientController controller) {
 		panel = new JPanel();
 		panel.setLayout(new BorderLayout(0, 0));
 		
