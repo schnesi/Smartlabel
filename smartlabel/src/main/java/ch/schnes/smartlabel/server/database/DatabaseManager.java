@@ -9,7 +9,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Properties;
 
+import ch.schnes.smartlabel.server.Logger;
+
 public class DatabaseManager {
+	private final Logger logger = Logger.getInstance();
+	private final String INSTANCE = "DatabaseManager";
 	private Connection connection;
 	private String url, user, password;
 	Properties properties;
@@ -19,10 +23,12 @@ public class DatabaseManager {
 	 * @throws IOException
 	 */
 	public DatabaseManager() throws IOException {
-		FileInputStream input = new FileInputStream("src/ch/schnes/smartlabel/server/config.properties");
+		FileInputStream input = new FileInputStream("src/main/resources/config.properties");
 		properties = new Properties();
 		properties.load(input);
 		url = properties.getProperty("Database.url");
+		user = properties.getProperty("Database.user");
+		password = properties.getProperty("Database.password");
 	}
 	
 	/**
@@ -31,7 +37,8 @@ public class DatabaseManager {
 	 */
 	public void connect() throws SQLException {
 		connection = DriverManager.getConnection(url, user, password);
-		System.out.println("Connected to DB.");
+		System.out.println("DatabaseManager: Connected to DB.");
+		logger.logInfo(INSTANCE, "Connected to DB");
 	}
 	
 	/**
@@ -41,7 +48,8 @@ public class DatabaseManager {
 	public void close() throws SQLException {
 		if (connection != null) {
 			connection.close();
-			System.out.println("Connection to DB closed.");
+			System.out.println("DatabaseManager: Connection to DB closed.");
+			logger.logInfo(INSTANCE, "Connection to DB closed");
 		}
 	}
 	
@@ -52,7 +60,7 @@ public class DatabaseManager {
 	 * @throws SQLException
 	 */
 	public ResultSet executeQuery(String query) throws SQLException {
-		PreparedStatement preparedStatement = connection.prepareStatement(query);
+		PreparedStatement preparedStatement = connection.prepareStatement(query);		
 		return preparedStatement.executeQuery();
 	}
 	

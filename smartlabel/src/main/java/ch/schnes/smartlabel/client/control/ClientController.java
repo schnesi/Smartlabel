@@ -1,12 +1,16 @@
 package ch.schnes.smartlabel.client.control;
 
+import ch.schnes.smartlabel.JsonHandler;
 import ch.schnes.smartlabel.MqttHandler;
 import ch.schnes.smartlabel.Observer;
 import ch.schnes.smartlabel.client.*;
 import ch.schnes.smartlabel.client.mainmodel.ClientMainModel;
+import ch.schnes.smartlabel.client.mainmodel.LoadingModel;
 import ch.schnes.smartlabel.client.mainmodel.OrderModel;
 
 import java.io.FileInputStream;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Properties;
 
 import javax.swing.JPanel;
@@ -27,7 +31,7 @@ public class ClientController implements Observer {
 		try {
 			this.view = view;
 			menu = new ClientMenuModel(this);
-			FileInputStream input = new FileInputStream("src/ch/schnes/smartlabel/client/config.properties");
+			FileInputStream input = new FileInputStream("src/main/resources/config.properties");
 			properties = new Properties();
 			properties.load(input);
 			brokerUrl = properties.getProperty("ClientController.brokerUrl");
@@ -62,7 +66,16 @@ public class ClientController implements Observer {
 	 */
 	public void getOrder() {
 		try {
-			String message = "Message";
+			LoadingModel model = new LoadingModel();
+			view.setMainView(model.getPanel());
+			
+			Map<String, Object> data = new HashMap<>();
+			data.put("clientId", properties.getProperty("ClientController.clientId"));
+			data.put("item", "order");
+			Map<String, Object> json = new HashMap<>();
+			json.put("header", "request");
+			json.put("data", data);
+			String message = JsonHandler.serialize(json);
 			String topic = properties.getProperty("ClientController.topic.publish"); 
 			client.publish(message, topic, 2);
 		} catch (MqttException me) {
@@ -109,7 +122,13 @@ public class ClientController implements Observer {
 	}
 
 	@Override
-	public void update(String topic, Object message) {
+	public void update(String topic, String message) {
+		System.out.println(topic);
+		
+	}
+
+	@Override
+	public void update(String message) {
 		// TODO Auto-generated method stub
 		
 	}

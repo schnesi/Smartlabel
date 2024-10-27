@@ -48,8 +48,15 @@ public class MqttHandler implements MqttCallback {
 	 * Notify the observers
 	 * @param topic
 	 * @param message
+	 * @param message2 
 	 */
-	private void notifyObservers(String topic, Object message) {
+	private void notifyObservers(String message) {
+		for (Observer observer : observers) {
+			observer.update(message);
+		}
+	}
+	
+	private void messageArrived(String topic, String message) {
 		for (Observer observer : observers) {
 			observer.update(topic, message);
 		}
@@ -71,7 +78,7 @@ public class MqttHandler implements MqttCallback {
 		client.connect(options);
 		System.out.println("Connected to broker: " + brokerUrl);
 		client.subscribe(topic);
-		System.out.println("Subscrebed topic: " + topic);
+		System.out.println("Subscribed topic: " + topic);
 	}
 		
 	/**
@@ -87,6 +94,7 @@ public class MqttHandler implements MqttCallback {
 		msg.setQos(qos);
 		client.publish(topic, msg);
 		System.out.println("Message published: " + msg);
+		System.out.println("Topic: " + topic);
 	}
 	
 	/**
@@ -96,7 +104,7 @@ public class MqttHandler implements MqttCallback {
 	public void disconnect() throws MqttException {
 		client.disconnect();
 		System.out.println("Disconnected");
-		notifyObservers("disconnected", null);
+		notifyObservers("disconnected");
 	}
 		
 	/**
@@ -104,7 +112,7 @@ public class MqttHandler implements MqttCallback {
 	 */
 	@Override
 	public void connectionLost(Throwable arg0) {
-		notifyObservers("connectionLost", null);
+		notifyObservers("connectionLost");
 	}
 
 	/**
@@ -112,7 +120,7 @@ public class MqttHandler implements MqttCallback {
 	 */
 	@Override
 	public void deliveryComplete(IMqttDeliveryToken arg) {
-		notifyObservers("delivery complete", arg);
+		notifyObservers("delivery complete");
 		
 	}
 
@@ -123,6 +131,6 @@ public class MqttHandler implements MqttCallback {
 	public void messageArrived(String topic, MqttMessage msg) throws Exception {
 		String message = new String(msg.getPayload());
 		System.out.println("Message arrived: " + message);
-		notifyObservers(topic, message);
+		messageArrived(topic, message);
 	}
 }
