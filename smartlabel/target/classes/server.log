@@ -416,3 +416,416 @@
 [2024-10-27 17:05:34] [INFO] DatabaseManager: Connection to DB closed
 [2024-10-27 17:05:34] [INFO] DataRepository: Select Data from DB successful
 [2024-10-27 17:05:34] [INFO] DataRepository: Request order data successful
+[2024-10-27 17:08:57] [INFO] ServerMain: Start Server
+[2024-10-27 17:08:57] [INFO] DataService: DataService and MQTT-Client initialized
+[2024-10-27 17:15:39] [INFO] DataRepository: orderData requestetd
+[2024-10-27 17:15:39] [INFO] DataRepository: Order data requested
+[2024-10-27 17:15:39] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 17:15:39] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 17:15:39] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 17:15:39] [INFO] DataRepository: Request order data successful
+[2024-10-27 17:16:03] [INFO] DataRepository: orderData requestetd
+[2024-10-27 17:16:03] [INFO] DataRepository: Order data requested
+[2024-10-27 17:16:03] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 17:16:03] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 17:16:03] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 17:16:03] [INFO] DataRepository: Request order data successful
+[2024-10-27 17:20:56] [INFO] ServerMain: Start Server
+[2024-10-27 17:20:56] [INFO] DataService: DataService and MQTT-Client initialized
+[2024-10-27 17:21:03] [INFO] DataRepository: orderData requestetd
+[2024-10-27 17:21:03] [INFO] DataRepository: Order data requested
+[2024-10-27 17:21:03] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 17:21:03] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 17:21:03] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 17:21:03] [INFO] DataRepository: Request order data successful
+[2024-10-27 17:21:24] [INFO] ServerMain: Start Server
+[2024-10-27 17:21:25] [INFO] DataService: DataService and MQTT-Client initialized
+[2024-10-27 17:21:34] [INFO] DataRepository: orderData requestetd
+[2024-10-27 17:21:34] [INFO] DataRepository: Order data requested
+[2024-10-27 17:21:34] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 17:21:35] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 17:21:35] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 17:21:35] [INFO] DataRepository: Request order data successful
+[2024-10-27 17:22:43] [INFO] ServerMain: Start Server
+[2024-10-27 17:22:44] [INFO] DataService: DataService and MQTT-Client initialized
+[2024-10-27 17:22:59] [INFO] DataRepository: orderData requestetd
+[2024-10-27 17:22:59] [INFO] DataRepository: Order data requested
+[2024-10-27 17:23:00] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 17:23:00] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 17:23:00] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 17:23:00] [INFO] DataRepository: Request order data successful
+[2024-10-27 17:23:50] [INFO] ServerMain: Start Server
+[2024-10-27 17:23:51] [INFO] DataService: DataService and MQTT-Client initialized
+[2024-10-27 17:23:54] [INFO] DataRepository: orderData requestetd
+[2024-10-27 17:23:54] [INFO] DataRepository: Order data requested
+[2024-10-27 17:23:54] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 17:23:54] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 17:23:54] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 17:23:54] [INFO] DataRepository: Request order data successful
+[2024-10-27 17:25:11] [INFO] ServerMain: Start Server
+[2024-10-27 17:25:12] [INFO] DataService: DataService and MQTT-Client initialized
+[2024-10-27 17:25:19] [INFO] DataRepository: orderData requestetd
+[2024-10-27 17:25:19] [INFO] DataRepository: Order data requested
+[2024-10-27 17:25:20] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 17:25:20] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 17:25:20] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 17:25:20] [INFO] DataRepository: Request order data successful
+[2024-10-27 17:26:34] [INFO] ServerMain: Start Server
+[2024-10-27 17:26:35] [INFO] DataService: DataService and MQTT-Client initialized
+[2024-10-27 17:26:41] [INFO] DataRepository: orderData requestetd
+[2024-10-27 17:26:41] [INFO] DataRepository: Order data requested
+[2024-10-27 17:26:41] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 17:26:41] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 17:26:41] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 17:26:41] [INFO] DataRepository: Request order data successful
+[2024-10-27 17:28:23] [INFO] DataRepository: orderData requestetd
+[2024-10-27 17:28:23] [INFO] DataRepository: Order data requested
+[2024-10-27 17:28:23] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 17:28:23] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 17:28:23] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 17:28:23] [INFO] DataRepository: Request order data successful
+[2024-10-27 17:28:37] [INFO] DataRepository: orderData requestetd
+[2024-10-27 17:28:37] [INFO] DataRepository: Order data requested
+[2024-10-27 17:28:37] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 17:28:37] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 17:28:37] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 17:28:37] [INFO] DataRepository: Request order data successful
+[2024-10-27 17:28:45] [INFO] DataRepository: orderData requestetd
+[2024-10-27 17:28:45] [INFO] DataRepository: Order data requested
+[2024-10-27 17:28:45] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 17:28:45] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 17:28:45] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 17:28:45] [INFO] DataRepository: Request order data successful
+[2024-10-27 17:28:49] [INFO] DataRepository: orderData requestetd
+[2024-10-27 17:28:49] [INFO] DataRepository: Order data requested
+[2024-10-27 17:28:49] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 17:28:49] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 17:28:49] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 17:28:49] [INFO] DataRepository: Request order data successful
+[2024-10-27 17:42:37] [INFO] DataRepository: orderData requestetd
+[2024-10-27 17:42:37] [INFO] DataRepository: Order data requested
+[2024-10-27 17:42:37] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 17:42:37] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 17:42:37] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 17:42:37] [INFO] DataRepository: Request order data successful
+[2024-10-27 18:02:07] [INFO] DataRepository: orderData requestetd
+[2024-10-27 18:02:07] [INFO] DataRepository: Order data requested
+[2024-10-27 18:02:07] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 18:02:07] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 18:02:07] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 18:02:07] [INFO] DataRepository: Request order data successful
+[2024-10-27 18:02:36] [INFO] DataRepository: orderData requestetd
+[2024-10-27 18:02:36] [INFO] DataRepository: Order data requested
+[2024-10-27 18:02:36] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 18:02:36] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 18:02:36] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 18:02:36] [INFO] DataRepository: Request order data successful
+[2024-10-27 18:02:43] [INFO] DataRepository: orderData requestetd
+[2024-10-27 18:02:43] [INFO] DataRepository: Order data requested
+[2024-10-27 18:02:43] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 18:02:43] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 18:02:43] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 18:02:43] [INFO] DataRepository: Request order data successful
+[2024-10-27 18:03:00] [INFO] DataRepository: orderData requestetd
+[2024-10-27 18:03:00] [INFO] DataRepository: Order data requested
+[2024-10-27 18:03:00] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 18:03:00] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 18:03:00] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 18:03:00] [INFO] DataRepository: Request order data successful
+[2024-10-27 18:04:12] [INFO] ServerMain: Start Server
+[2024-10-27 18:04:12] [INFO] DataService: DataService and MQTT-Client initialized
+[2024-10-27 18:04:15] [INFO] DataRepository: orderData requestetd
+[2024-10-27 18:04:15] [INFO] DataRepository: Order data requested
+[2024-10-27 18:04:15] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 18:04:15] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 18:04:15] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 18:04:15] [INFO] DataRepository: Request order data successful
+[2024-10-27 18:05:26] [INFO] ServerMain: Start Server
+[2024-10-27 18:05:26] [INFO] DataService: DataService and MQTT-Client initialized
+[2024-10-27 18:05:34] [INFO] DataRepository: orderData requestetd
+[2024-10-27 18:05:34] [INFO] DataRepository: Order data requested
+[2024-10-27 18:05:34] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 18:05:34] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 18:05:34] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 18:05:34] [INFO] DataRepository: Request order data successful
+[2024-10-27 18:05:34] [ERROR] DataService: Failed to send the MQTT-message
+[2024-10-27 18:05:34] [ERROR] DataService: msg: MqttException, loc: MqttException, cause: java.io.FileNotFoundException: C:\Users\simon\git\Smartlabel\smartlabel\DataService-tcptestmosquittoorg1883\s-2.msg (Das System kann den angegebenen Pfad nicht finden), excep: MqttException (0) - java.io.FileNotFoundException: C:\Users\simon\git\Smartlabel\smartlabel\DataService-tcptestmosquittoorg1883\s-2.msg (Das System kann den angegebenen Pfad nicht finden)
+[2024-10-27 18:05:41] [INFO] DataRepository: orderData requestetd
+[2024-10-27 18:05:41] [INFO] DataRepository: Order data requested
+[2024-10-27 18:05:41] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 18:05:41] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 18:05:41] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 18:05:41] [INFO] DataRepository: Request order data successful
+[2024-10-27 18:05:41] [ERROR] DataService: Failed to send the MQTT-message
+[2024-10-27 18:05:41] [ERROR] DataService: msg: MqttException, loc: MqttException, cause: java.io.FileNotFoundException: C:\Users\simon\git\Smartlabel\smartlabel\DataService-tcptestmosquittoorg1883\s-3.msg (Das System kann den angegebenen Pfad nicht finden), excep: MqttException (0) - java.io.FileNotFoundException: C:\Users\simon\git\Smartlabel\smartlabel\DataService-tcptestmosquittoorg1883\s-3.msg (Das System kann den angegebenen Pfad nicht finden)
+[2024-10-27 18:05:51] [INFO] DataRepository: orderData requestetd
+[2024-10-27 18:05:51] [INFO] DataRepository: Order data requested
+[2024-10-27 18:05:51] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 18:05:51] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 18:05:51] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 18:05:51] [INFO] DataRepository: Request order data successful
+[2024-10-27 18:05:51] [ERROR] DataService: Failed to send the MQTT-message
+[2024-10-27 18:05:51] [ERROR] DataService: msg: MqttException, loc: MqttException, cause: java.io.FileNotFoundException: C:\Users\simon\git\Smartlabel\smartlabel\DataService-tcptestmosquittoorg1883\s-4.msg (Das System kann den angegebenen Pfad nicht finden), excep: MqttException (0) - java.io.FileNotFoundException: C:\Users\simon\git\Smartlabel\smartlabel\DataService-tcptestmosquittoorg1883\s-4.msg (Das System kann den angegebenen Pfad nicht finden)
+[2024-10-27 18:05:55] [INFO] DataRepository: orderData requestetd
+[2024-10-27 18:05:55] [INFO] DataRepository: Order data requested
+[2024-10-27 18:05:55] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 18:05:55] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 18:05:55] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 18:05:55] [INFO] DataRepository: Request order data successful
+[2024-10-27 18:05:55] [ERROR] DataService: Failed to send the MQTT-message
+[2024-10-27 18:05:55] [ERROR] DataService: msg: MqttException, loc: MqttException, cause: java.io.FileNotFoundException: C:\Users\simon\git\Smartlabel\smartlabel\DataService-tcptestmosquittoorg1883\s-5.msg (Das System kann den angegebenen Pfad nicht finden), excep: MqttException (0) - java.io.FileNotFoundException: C:\Users\simon\git\Smartlabel\smartlabel\DataService-tcptestmosquittoorg1883\s-5.msg (Das System kann den angegebenen Pfad nicht finden)
+[2024-10-27 18:06:21] [INFO] ServerMain: Start Server
+[2024-10-27 18:06:22] [INFO] DataService: DataService and MQTT-Client initialized
+[2024-10-27 18:06:28] [INFO] DataRepository: orderData requestetd
+[2024-10-27 18:06:28] [INFO] DataRepository: Order data requested
+[2024-10-27 18:06:28] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 18:06:28] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 18:06:28] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 18:06:28] [INFO] DataRepository: Request order data successful
+[2024-10-27 18:06:57] [INFO] DataRepository: orderData requestetd
+[2024-10-27 18:06:57] [INFO] DataRepository: Order data requested
+[2024-10-27 18:06:57] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 18:06:57] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 18:06:57] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 18:06:57] [INFO] DataRepository: Request order data successful
+[2024-10-27 18:26:08] [INFO] ServerMain: Start Server
+[2024-10-27 18:26:09] [INFO] DataService: DataService and MQTT-Client initialized
+[2024-10-27 18:26:21] [INFO] DataRepository: orderData requestetd
+[2024-10-27 18:26:21] [INFO] DataRepository: Order data requested
+[2024-10-27 18:26:21] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 18:26:21] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 18:26:21] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 18:26:21] [INFO] DataRepository: Request order data successful
+[2024-10-27 18:26:21] [ERROR] DataService: Failed to send the MQTT-message
+[2024-10-27 18:26:21] [ERROR] DataService: msg: MqttException, loc: MqttException, cause: java.io.FileNotFoundException: C:\Users\simon\git\Smartlabel\smartlabel\DataService-tcptestmosquittoorg1883\s-2.msg (Das System kann den angegebenen Pfad nicht finden), excep: MqttException (0) - java.io.FileNotFoundException: C:\Users\simon\git\Smartlabel\smartlabel\DataService-tcptestmosquittoorg1883\s-2.msg (Das System kann den angegebenen Pfad nicht finden)
+[2024-10-27 18:26:31] [INFO] DataRepository: orderData requestetd
+[2024-10-27 18:26:31] [INFO] DataRepository: Order data requested
+[2024-10-27 18:26:31] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 18:26:31] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 18:26:31] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 18:26:31] [INFO] DataRepository: Request order data successful
+[2024-10-27 18:26:31] [ERROR] DataService: Failed to send the MQTT-message
+[2024-10-27 18:26:31] [ERROR] DataService: msg: MqttException, loc: MqttException, cause: java.io.FileNotFoundException: C:\Users\simon\git\Smartlabel\smartlabel\DataService-tcptestmosquittoorg1883\s-3.msg (Das System kann den angegebenen Pfad nicht finden), excep: MqttException (0) - java.io.FileNotFoundException: C:\Users\simon\git\Smartlabel\smartlabel\DataService-tcptestmosquittoorg1883\s-3.msg (Das System kann den angegebenen Pfad nicht finden)
+[2024-10-27 18:26:42] [INFO] ServerMain: Start Server
+[2024-10-27 18:26:42] [INFO] DataService: DataService and MQTT-Client initialized
+[2024-10-27 18:26:49] [INFO] DataRepository: orderData requestetd
+[2024-10-27 18:26:49] [INFO] DataRepository: Order data requested
+[2024-10-27 18:26:49] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 18:26:49] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 18:26:49] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 18:26:49] [INFO] DataRepository: Request order data successful
+[2024-10-27 18:28:20] [INFO] DataRepository: orderData requestetd
+[2024-10-27 18:28:20] [INFO] DataRepository: Order data requested
+[2024-10-27 18:28:20] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 18:28:20] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 18:28:20] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 18:28:20] [INFO] DataRepository: Request order data successful
+[2024-10-27 18:29:56] [INFO] DataRepository: orderData requestetd
+[2024-10-27 18:29:56] [INFO] DataRepository: Order data requested
+[2024-10-27 18:29:56] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 18:29:56] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 18:29:56] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 18:29:56] [INFO] DataRepository: Request order data successful
+[2024-10-27 18:41:53] [INFO] DataRepository: orderData requestetd
+[2024-10-27 18:41:53] [INFO] DataRepository: Order data requested
+[2024-10-27 18:41:53] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 18:41:53] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 18:41:53] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 18:41:53] [INFO] DataRepository: Request order data successful
+[2024-10-27 18:42:45] [INFO] DataRepository: orderData requestetd
+[2024-10-27 18:42:45] [INFO] DataRepository: Order data requested
+[2024-10-27 18:42:45] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 18:42:45] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 18:42:45] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 18:42:45] [INFO] DataRepository: Request order data successful
+[2024-10-27 18:44:16] [INFO] DataRepository: orderData requestetd
+[2024-10-27 18:44:16] [INFO] DataRepository: Order data requested
+[2024-10-27 18:44:16] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 18:44:16] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 18:44:16] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 18:44:16] [INFO] DataRepository: Request order data successful
+[2024-10-27 18:47:05] [INFO] ServerMain: Start Server
+[2024-10-27 18:47:05] [INFO] DataService: DataService and MQTT-Client initialized
+[2024-10-27 18:47:12] [INFO] DataRepository: orderData requestetd
+[2024-10-27 18:47:12] [INFO] DataRepository: Order data requested
+[2024-10-27 18:47:12] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 18:47:12] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 18:47:12] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 18:47:12] [INFO] DataRepository: Request order data successful
+[2024-10-27 18:50:39] [INFO] DataRepository: orderData requestetd
+[2024-10-27 18:50:39] [INFO] DataRepository: Order data requested
+[2024-10-27 18:50:39] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 18:50:39] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 18:50:39] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 18:50:39] [INFO] DataRepository: Request order data successful
+[2024-10-27 18:50:46] [INFO] ServerMain: Start Server
+[2024-10-27 18:50:46] [INFO] DataService: DataService and MQTT-Client initialized
+[2024-10-27 18:50:47] [INFO] ServerMain: Start Server
+[2024-10-27 18:50:48] [ERROR] ServerMain: ServerMain: Failed to initialize the MqttHandler
+[2024-10-27 18:50:48] [ERROR] ServerMain: msg: MqttException, loc: MqttException, cause: null, excep: MqttException (0)
+[2024-10-27 18:50:54] [INFO] ServerMain: Start Server
+[2024-10-27 18:50:54] [INFO] DataService: DataService and MQTT-Client initialized
+[2024-10-27 18:51:03] [INFO] DataRepository: orderData requestetd
+[2024-10-27 18:51:03] [INFO] DataRepository: Order data requested
+[2024-10-27 18:51:04] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 18:51:04] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 18:51:04] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 18:51:04] [INFO] DataRepository: Request order data successful
+[2024-10-27 18:51:31] [INFO] DataRepository: orderData requestetd
+[2024-10-27 18:51:31] [INFO] DataRepository: Order data requested
+[2024-10-27 18:51:31] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 18:51:31] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 18:51:31] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 18:51:31] [INFO] DataRepository: Request order data successful
+[2024-10-27 18:51:50] [INFO] ServerMain: Start Server
+[2024-10-27 18:51:51] [INFO] DataService: DataService and MQTT-Client initialized
+[2024-10-27 18:51:57] [INFO] DataRepository: orderData requestetd
+[2024-10-27 18:51:57] [INFO] DataRepository: Order data requested
+[2024-10-27 18:51:57] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 18:51:57] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 18:51:57] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 18:51:57] [INFO] DataRepository: Request order data successful
+[2024-10-27 18:52:04] [INFO] DataRepository: orderData requestetd
+[2024-10-27 18:52:04] [INFO] DataRepository: Order data requested
+[2024-10-27 18:52:04] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 18:52:04] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 18:52:04] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 18:52:04] [INFO] DataRepository: Request order data successful
+[2024-10-27 18:55:34] [INFO] DataRepository: orderData requestetd
+[2024-10-27 18:55:34] [INFO] DataRepository: Order data requested
+[2024-10-27 18:55:34] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 18:55:34] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 18:55:34] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 18:55:34] [INFO] DataRepository: Request order data successful
+[2024-10-27 19:03:02] [INFO] DataRepository: orderData requestetd
+[2024-10-27 19:03:02] [INFO] DataRepository: Order data requested
+[2024-10-27 19:03:02] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 19:03:02] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 19:03:02] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 19:03:02] [INFO] DataRepository: Request order data successful
+[2024-10-27 19:34:15] [INFO] DataRepository: orderData requestetd
+[2024-10-27 19:34:15] [INFO] DataRepository: Order data requested
+[2024-10-27 19:34:15] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 19:34:15] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 19:34:15] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 19:34:15] [INFO] DataRepository: Request order data successful
+[2024-10-27 19:35:17] [INFO] DataRepository: orderData requestetd
+[2024-10-27 19:35:17] [INFO] DataRepository: Order data requested
+[2024-10-27 19:35:17] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 19:35:17] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 19:35:17] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 19:35:17] [INFO] DataRepository: Request order data successful
+[2024-10-27 19:35:43] [INFO] DataRepository: orderData requestetd
+[2024-10-27 19:35:43] [INFO] DataRepository: Order data requested
+[2024-10-27 19:35:43] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 19:35:43] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 19:35:43] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 19:35:43] [INFO] DataRepository: Request order data successful
+[2024-10-27 19:36:43] [INFO] DataRepository: orderData requestetd
+[2024-10-27 19:36:43] [INFO] DataRepository: Order data requested
+[2024-10-27 19:36:43] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 19:36:43] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 19:36:43] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 19:36:43] [INFO] DataRepository: Request order data successful
+[2024-10-27 19:36:58] [INFO] DataRepository: orderData requestetd
+[2024-10-27 19:36:58] [INFO] DataRepository: Order data requested
+[2024-10-27 19:36:58] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 19:36:58] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 19:36:58] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 19:36:58] [INFO] DataRepository: Request order data successful
+[2024-10-27 19:37:07] [INFO] ServerMain: Start Server
+[2024-10-27 19:37:07] [INFO] DataService: DataService and MQTT-Client initialized
+[2024-10-27 19:37:11] [INFO] ServerMain: Start Server
+[2024-10-27 19:37:11] [INFO] DataService: DataService and MQTT-Client initialized
+[2024-10-27 19:37:20] [INFO] DataRepository: orderData requestetd
+[2024-10-27 19:37:20] [INFO] DataRepository: Order data requested
+[2024-10-27 19:37:20] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 19:37:20] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 19:37:20] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 19:37:20] [INFO] DataRepository: Request order data successful
+[2024-10-27 19:37:20] [ERROR] DataService: Failed to send the MQTT-message
+[2024-10-27 19:37:20] [ERROR] DataService: msg: MqttException, loc: MqttException, cause: java.io.FileNotFoundException: C:\Users\simon\git\Smartlabel\smartlabel\DataService-tcptestmosquittoorg1883\s-2.msg (Das System kann den angegebenen Pfad nicht finden), excep: MqttException (0) - java.io.FileNotFoundException: C:\Users\simon\git\Smartlabel\smartlabel\DataService-tcptestmosquittoorg1883\s-2.msg (Das System kann den angegebenen Pfad nicht finden)
+[2024-10-27 19:37:45] [INFO] DataRepository: orderData requestetd
+[2024-10-27 19:37:45] [INFO] DataRepository: Order data requested
+[2024-10-27 19:37:45] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 19:37:45] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 19:37:45] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 19:37:45] [INFO] DataRepository: Request order data successful
+[2024-10-27 19:37:45] [ERROR] DataService: Failed to send the MQTT-message
+[2024-10-27 19:37:45] [ERROR] DataService: msg: MqttException, loc: MqttException, cause: java.io.FileNotFoundException: C:\Users\simon\git\Smartlabel\smartlabel\DataService-tcptestmosquittoorg1883\s-3.msg (Das System kann den angegebenen Pfad nicht finden), excep: MqttException (0) - java.io.FileNotFoundException: C:\Users\simon\git\Smartlabel\smartlabel\DataService-tcptestmosquittoorg1883\s-3.msg (Das System kann den angegebenen Pfad nicht finden)
+[2024-10-27 19:37:49] [INFO] DataRepository: orderData requestetd
+[2024-10-27 19:37:49] [INFO] DataRepository: Order data requested
+[2024-10-27 19:37:49] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 19:37:49] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 19:37:49] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 19:37:49] [INFO] DataRepository: Request order data successful
+[2024-10-27 19:37:49] [ERROR] DataService: Failed to send the MQTT-message
+[2024-10-27 19:37:49] [ERROR] DataService: msg: MqttException, loc: MqttException, cause: java.io.FileNotFoundException: C:\Users\simon\git\Smartlabel\smartlabel\DataService-tcptestmosquittoorg1883\s-4.msg (Das System kann den angegebenen Pfad nicht finden), excep: MqttException (0) - java.io.FileNotFoundException: C:\Users\simon\git\Smartlabel\smartlabel\DataService-tcptestmosquittoorg1883\s-4.msg (Das System kann den angegebenen Pfad nicht finden)
+[2024-10-27 19:37:55] [INFO] DataRepository: orderData requestetd
+[2024-10-27 19:37:55] [INFO] DataRepository: Order data requested
+[2024-10-27 19:37:55] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 19:37:55] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 19:37:55] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 19:37:55] [INFO] DataRepository: Request order data successful
+[2024-10-27 19:37:55] [ERROR] DataService: Failed to send the MQTT-message
+[2024-10-27 19:37:55] [ERROR] DataService: msg: MqttException, loc: MqttException, cause: java.io.FileNotFoundException: C:\Users\simon\git\Smartlabel\smartlabel\DataService-tcptestmosquittoorg1883\s-5.msg (Das System kann den angegebenen Pfad nicht finden), excep: MqttException (0) - java.io.FileNotFoundException: C:\Users\simon\git\Smartlabel\smartlabel\DataService-tcptestmosquittoorg1883\s-5.msg (Das System kann den angegebenen Pfad nicht finden)
+[2024-10-27 19:38:01] [INFO] ServerMain: Start Server
+[2024-10-27 19:38:02] [INFO] DataService: DataService and MQTT-Client initialized
+[2024-10-27 19:38:06] [INFO] ServerMain: Start Server
+[2024-10-27 19:38:07] [INFO] DataService: DataService and MQTT-Client initialized
+[2024-10-27 19:38:15] [INFO] DataRepository: orderData requestetd
+[2024-10-27 19:38:15] [INFO] DataRepository: Order data requested
+[2024-10-27 19:38:16] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 19:38:16] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 19:38:16] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 19:38:16] [INFO] DataRepository: Request order data successful
+[2024-10-27 19:38:16] [ERROR] DataService: Failed to send the MQTT-message
+[2024-10-27 19:38:16] [ERROR] DataService: msg: MqttException, loc: MqttException, cause: java.io.FileNotFoundException: C:\Users\simon\git\Smartlabel\smartlabel\DataService-tcptestmosquittoorg1883\s-2.msg (Das System kann den angegebenen Pfad nicht finden), excep: MqttException (0) - java.io.FileNotFoundException: C:\Users\simon\git\Smartlabel\smartlabel\DataService-tcptestmosquittoorg1883\s-2.msg (Das System kann den angegebenen Pfad nicht finden)
+[2024-10-27 19:38:20] [INFO] DataRepository: orderData requestetd
+[2024-10-27 19:38:20] [INFO] DataRepository: Order data requested
+[2024-10-27 19:38:20] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 19:38:20] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 19:38:20] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 19:38:20] [INFO] DataRepository: Request order data successful
+[2024-10-27 19:38:20] [ERROR] DataService: Failed to send the MQTT-message
+[2024-10-27 19:38:20] [ERROR] DataService: msg: MqttException, loc: MqttException, cause: java.io.FileNotFoundException: C:\Users\simon\git\Smartlabel\smartlabel\DataService-tcptestmosquittoorg1883\s-3.msg (Das System kann den angegebenen Pfad nicht finden), excep: MqttException (0) - java.io.FileNotFoundException: C:\Users\simon\git\Smartlabel\smartlabel\DataService-tcptestmosquittoorg1883\s-3.msg (Das System kann den angegebenen Pfad nicht finden)
+[2024-10-27 19:38:25] [INFO] DataRepository: orderData requestetd
+[2024-10-27 19:38:25] [INFO] DataRepository: Order data requested
+[2024-10-27 19:38:25] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 19:38:25] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 19:38:25] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 19:38:25] [INFO] DataRepository: Request order data successful
+[2024-10-27 19:38:25] [ERROR] DataService: Failed to send the MQTT-message
+[2024-10-27 19:38:25] [ERROR] DataService: msg: MqttException, loc: MqttException, cause: java.io.FileNotFoundException: C:\Users\simon\git\Smartlabel\smartlabel\DataService-tcptestmosquittoorg1883\s-4.msg (Das System kann den angegebenen Pfad nicht finden), excep: MqttException (0) - java.io.FileNotFoundException: C:\Users\simon\git\Smartlabel\smartlabel\DataService-tcptestmosquittoorg1883\s-4.msg (Das System kann den angegebenen Pfad nicht finden)
+[2024-10-27 19:38:39] [INFO] ServerMain: Start Server
+[2024-10-27 19:38:39] [INFO] DataService: DataService and MQTT-Client initialized
+[2024-10-27 19:38:47] [INFO] DataRepository: orderData requestetd
+[2024-10-27 19:38:47] [INFO] DataRepository: Order data requested
+[2024-10-27 19:38:47] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 19:38:47] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 19:38:47] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 19:38:47] [INFO] DataRepository: Request order data successful
+[2024-10-27 19:49:31] [INFO] DataRepository: orderData requestetd
+[2024-10-27 19:49:31] [INFO] DataRepository: Order data requested
+[2024-10-27 19:49:31] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 19:49:31] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 19:49:31] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 19:49:31] [INFO] DataRepository: Request order data successful
+[2024-10-27 19:50:41] [INFO] DataRepository: orderData requestetd
+[2024-10-27 19:50:41] [INFO] DataRepository: Order data requested
+[2024-10-27 19:50:41] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 19:50:41] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 19:50:41] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 19:50:41] [INFO] DataRepository: Request order data successful
+[2024-10-27 19:52:03] [INFO] DataRepository: orderData requestetd
+[2024-10-27 19:52:03] [INFO] DataRepository: Order data requested
+[2024-10-27 19:52:03] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 19:52:03] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 19:52:03] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 19:52:03] [INFO] DataRepository: Request order data successful
+[2024-10-27 19:54:39] [INFO] DataRepository: orderData requestetd
+[2024-10-27 19:54:39] [INFO] DataRepository: Order data requested
+[2024-10-27 19:54:39] [INFO] DatabaseManager: Connected to DB
+[2024-10-27 19:54:39] [INFO] DatabaseManager: Connection to DB closed
+[2024-10-27 19:54:39] [INFO] DataRepository: Select Data from DB successful
+[2024-10-27 19:54:39] [INFO] DataRepository: Request order data successful

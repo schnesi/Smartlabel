@@ -32,20 +32,32 @@ public class DataRepository implements Runnable {
 		Map<String, Object> data = (Map<String, Object>) jsonMap.get("data");
 		if ("request".equals(header)) {
 			String item = (String) data.get("item");
+			String headerResponse = null;
+			String topic = null;
 			System.out.println("DataRepository: header: " + header + ", item: " + item);
 			logger.logInfo(INSTANCE, "orderData requestetd");
 			if ("order".equals(item)) {
 				logger.logInfo(INSTANCE, "Order data requested");
 				body = requestOrder();
+				body.put("clientId", data.get("clientId"));
+				headerResponse = "responseOrder";
+				topic = "/smartlabel/client" + data.get("clientId");
 				logger.logInfo(INSTANCE, "Request order data successful");
 			}
 			
-			String topic = "/smartlabel/client/" + data.get("clientID");
-			body.put("clientID", data.get("clientID"));
+			if ("dataSmartlabel".equals(item)) {
+				logger.logInfo(INSTANCE, "Data smartlabel requested");
+				body = requestDataSmartlabel((String) data.get("smartlabelSN"));
+				body.put("smartlabelSN", data.get("smartlabelSN"));
+				headerResponse = "response";
+				topic = "/smartlabel/smartlabel" + data.get("smartlabelSN");
+				logger.logInfo(INSTANCE, "Request smartlabel data succesful");
+			}
+			
 			System.out.print("DataRepository: Execute query successful: ");
 			System.out.println(body);
 			Map<String, Object> answer = new HashMap<>();
-			answer.put("header", "responseOrder");
+			answer.put("header", headerResponse);
 			answer.put("data", body);
 			dataService.publish(topic, answer);
 		}
@@ -57,10 +69,18 @@ public class DataRepository implements Runnable {
 			body = selectData(DbQueryBuilder.selectOrder());
 			logger.logInfo(INSTANCE, "Select Data from DB successful");
 		} catch (SQLException e) {
-			System.out.println(INSTANCE + ": Select data from DB failed");
-			String msg = "msg: " + e.getMessage() + ", loc: " + e.getLocalizedMessage() + ", cause: " + e.getCause() + ", excep: " + e;
-			logger.logError(INSTANCE, "Select data from DB failed");
-			logger.logError(INSTANCE, msg);
+			sqlException(e);
+		}
+		return body;
+	}
+	
+	private Map<String, Object> requestDataSmartlabel(String smartlabelSN) {
+		Map<String, Object> body = null;
+		try {
+			body = selectData(DbQueryBuilder.selectSmartlabelInit(smartlabelSN));
+			logger.logInfo(INSTANCE, "Select Data from DB successful");
+		} catch (SQLException e) {
+			sqlException(e);
 		}
 		return body;
 	}
@@ -110,4 +130,11 @@ public class DataRepository implements Runnable {
         }
         return bodyMap;
     }
+	
+	private void sqlException(SQLException e) {
+		System.out.println(INSTANCE + ": Select data from DB failed");
+		String msg = "msg: " + e.getMessage() + ", loc: " + e.getLocalizedMessage() + ", cause: " + e.getCause() + ", excep: " + e;
+		logger.logError(INSTANCE, "Select data from DB failed");
+		logger.logError(INSTANCE, msg);
+	}
 }

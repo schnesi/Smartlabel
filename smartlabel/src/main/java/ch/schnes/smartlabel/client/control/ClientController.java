@@ -7,7 +7,7 @@ import ch.schnes.smartlabel.client.*;
 import ch.schnes.smartlabel.client.mainmodel.ClientMainModel;
 import ch.schnes.smartlabel.client.mainmodel.LoadingModel;
 import ch.schnes.smartlabel.client.mainmodel.OrderModel;
-
+import ch.schnes.smartlabel.client.mainmodel.OrderTestPanel;
 import java.io.FileInputStream;
 import java.util.HashMap;
 import java.util.Map;
@@ -70,12 +70,12 @@ public class ClientController implements Observer {
 			view.setMainView(model.getPanel());
 			
 			Map<String, Object> data = new HashMap<>();
-			data.put("clientId", properties.getProperty("ClientController.clientId"));
+			data.put("clientId", clientId);
 			data.put("item", "order");
 			Map<String, Object> json = new HashMap<>();
 			json.put("header", "request");
 			json.put("data", data);
-			String message = JsonHandler.serialize(json);
+			String message = JsonHandler.serialize(json);			
 			String topic = properties.getProperty("ClientController.topic.publish"); 
 			client.publish(message, topic, 2);
 		} catch (MqttException me) {
@@ -93,15 +93,8 @@ public class ClientController implements Observer {
 		}
 	}
 	
-	private void showOrder() {
-		Object[][] data = new Object[][] {
-			{"ClientID", "ClientID"},
-			{"OrderID", 1},
-			{"MaterialNO", "MaterialNO"},
-			{"MaterialName", "MaterialName"},
-			{"Storage", "Storage"},
-			{"qty", 1}
-		};
+	private void showOrder(Map<String, Object> json) {
+		Map<String, Object> data = (Map<String, Object>) json.get("data");
 		ClientMainModel mainModel = new OrderModel(data, this);
 		view.setMainView(mainModel.getPanel());
 	}
@@ -123,7 +116,18 @@ public class ClientController implements Observer {
 
 	@Override
 	public void update(String topic, String message) {
-		System.out.println(topic);
+		try {
+			if (topic.equals(properties.getProperty("ClientController.topic.receive"))) {
+				Map<String, Object> json = JsonHandler.deserialize(message);
+				if ("responseOrder".equals(json.get("header"))) showOrder(json);
+			}
+		} catch (Exception e) {
+			System.out.println("Failed to deserialize the message");
+	        System.out.println("msg "+e.getMessage());
+	        System.out.println("loc "+e.getLocalizedMessage());
+	        System.out.println("cause "+e.getCause());
+	        System.out.println("excep "+e);
+		}
 		
 	}
 

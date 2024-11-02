@@ -9,19 +9,17 @@ import java.util.Map;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
 import ch.schnes.smartlabel.client.control.ClientController;
 
-/**
- * Shows the and save the changed order data.
- */
-public class OrderModel implements ClientMainModel {
-	private ClientController controller;
+public class OrderTestPanel implements ClientMainModel {
+	ClientController controller;
 	private JPanel panel;
 	
-	public OrderModel(Map<String, Object> data, ClientController controller) {
+	public OrderTestPanel(Map<String, Object> data, ClientController controller) {
 		this.controller = controller;
 		panel = new JPanel();
 		panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
