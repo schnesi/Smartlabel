@@ -7,7 +7,6 @@ import ch.schnes.smartlabel.client.*;
 import ch.schnes.smartlabel.client.mainmodel.ClientMainModel;
 import ch.schnes.smartlabel.client.mainmodel.LoadingModel;
 import ch.schnes.smartlabel.client.mainmodel.OrderModel;
-import ch.schnes.smartlabel.client.mainmodel.OrderTestPanel;
 import java.io.FileInputStream;
 import java.util.HashMap;
 import java.util.Map;
@@ -85,18 +84,11 @@ public class ClientController implements Observer {
 	        System.out.println("cause "+me.getCause());
 	        System.out.println("excep "+me);
 		} catch (Exception e) {
-			System.out.println("Initializing of the Controller failed.");
 	        System.out.println("msg "+e.getMessage());
 	        System.out.println("loc "+e.getLocalizedMessage());
 	        System.out.println("cause "+e.getCause());
 	        System.out.println("excep "+e);
 		}
-	}
-	
-	private void showOrder(Map<String, Object> json) {
-		Map<String, Object> data = (Map<String, Object>) json.get("data");
-		ClientMainModel mainModel = new OrderModel(data, this);
-		view.setMainView(mainModel.getPanel());
 	}
 	
 	/**
@@ -105,13 +97,28 @@ public class ClientController implements Observer {
 	 * 
 	 * Noch nicht implementiert
 	 */
-	public void sendOrderData(Object[][] data) {
-        for (Object[] row : data) {
-            for (Object value : row) {
-                System.out.print(value + " ");
-            }
-            System.out.println();
-        }
+	public void sendOrderData(Map<String, Object> data) {
+        data.put("clientid", properties.getProperty("ClientController.clientId"));
+        Map<String, Object> json = Map.of(
+        	"header", "dbData",
+        	"data", data
+        );
+        try {
+			String message = JsonHandler.serialize(json);
+			String topic = properties.getProperty("ClientController.topic.publish"); 
+			client.publish(message, topic, 2);
+		} catch (MqttException me) {
+			System.out.println("reason "+me.getReasonCode());
+	        System.out.println("msg "+me.getMessage());
+	        System.out.println("loc "+me.getLocalizedMessage());
+	        System.out.println("cause "+me.getCause());
+	        System.out.println("excep "+me);
+		} catch (Exception e) {
+	        System.out.println("msg "+e.getMessage());
+	        System.out.println("loc "+e.getLocalizedMessage());
+	        System.out.println("cause "+e.getCause());
+	        System.out.println("excep "+e);
+		}
 	}
 
 	@Override
@@ -135,5 +142,11 @@ public class ClientController implements Observer {
 	public void update(String message) {
 		// TODO Auto-generated method stub
 		
+	}
+	
+	private void showOrder(Map<String, Object> json) {
+		Map<String, Object> data = (Map<String, Object>) json.get("data");
+		ClientMainModel mainModel = new OrderModel(data, this);
+		view.setMainView(mainModel.getPanel());
 	}
 }

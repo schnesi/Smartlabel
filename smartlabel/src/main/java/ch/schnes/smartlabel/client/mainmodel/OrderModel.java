@@ -63,7 +63,7 @@ public class OrderModel implements ClientMainModel {
 					@Override
 					public void actionPerformed(ActionEvent e) {						
 						Map<String, Object> tableData = extractTableData(table);
-						System.out.println("Table data for order " + entry.getKey() + ": " + tableData);
+						controller.sendOrderData(tableData);
 					}
 					
 				});
@@ -82,13 +82,23 @@ public class OrderModel implements ClientMainModel {
 	}
 	
 	private Map<String, Object> extractTableData(JTable table) {
-		Map<String, Object> dataMap = new HashMap<>();
-		DefaultTableModel model = (DefaultTableModel) table.getModel();
-		for (int row = 0; row < model.getRowCount(); row++) {
-			String key = model.getValueAt(row, 0).toString();
-			Object value = model.getValueAt(row, 1);
-			dataMap.put(key, value);
-		}
-		return dataMap;
+		Map<String, Object> extractedData = new HashMap<>();
+        int rowCount = table.getRowCount();
+
+        for (int row = 0; row < rowCount; row++) {
+            String key = table.getValueAt(row, 0).toString();
+            Object value = table.getValueAt(row, 1);
+
+            if ("orderid".equals(key)) {
+                extractedData.put("orderid", value);
+            } else if ("delivered".equals(key)) {
+                extractedData.put("qty", value);
+            } else if ("storage".equals(key)) {
+            	extractedData.put("storage", value);
+            } else if ("storageproduction".equals(key)) {
+            	extractedData.put("storageproduction", value);
+            }
+        }
+        return extractedData;
 	}
 }

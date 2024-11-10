@@ -30,37 +30,106 @@ public class DataRepository implements Runnable {
 		Map<String, Object> body = null;
 		String header = (String) jsonMap.get("header");
 		Map<String, Object> data = (Map<String, Object>) jsonMap.get("data");
+		String headerResponse = null;
+		String topic = null;
+		
+		// Handle requests
 		if ("request".equals(header)) {
 			String item = (String) data.get("item");
-			String headerResponse = null;
-			String topic = null;
 			System.out.println("DataRepository: header: " + header + ", item: " + item);
-			logger.logInfo(INSTANCE, "orderData requestetd");
+			
+			// Handle the order request from the client
 			if ("order".equals(item)) {
+				System.out.println("Order Data requested");
 				logger.logInfo(INSTANCE, "Order data requested");
 				body = requestOrder();
 				body.put("clientId", data.get("clientId"));
 				headerResponse = "responseOrder";
-				topic = "/smartlabel/client" + data.get("clientId");
+				topic = "/smartlabel/client/" + data.get("clientId");
 				logger.logInfo(INSTANCE, "Request order data successful");
 			}
 			
+			// Handle the dataSmartlabel request from the smartlabel
 			if ("dataSmartlabel".equals(item)) {
+				System.out.println("Data smartlabel requested");
 				logger.logInfo(INSTANCE, "Data smartlabel requested");
-				body = requestDataSmartlabel((String) data.get("smartlabelSN"));
+				body = requestDataSmartlabel(data.get("smartlabelSN"));
 				body.put("smartlabelSN", data.get("smartlabelSN"));
 				headerResponse = "response";
-				topic = "/smartlabel/smartlabel" + data.get("smartlabelSN");
-				logger.logInfo(INSTANCE, "Request smartlabel data succesful");
+				topic = "/smartlabel/smartlabel/" + data.get("smartlabelSN");
+				logger.logInfo(INSTANCE, "Request data smartlabel successful");
 			}
-			
+
 			System.out.print("DataRepository: Execute query successful: ");
 			System.out.println(body);
-			Map<String, Object> answer = new HashMap<>();
-			answer.put("header", headerResponse);
-			answer.put("data", body);
-			dataService.publish(topic, answer);
 		}
+		
+		// Handle order data changes
+		if ("dbData".equals(header)) {
+			System.out.println(INSTANCE + ": Order data change received");
+			logger.logInfo(INSTANCE, "Order data change received");
+			try {
+				Map<String, Object> ref = selectData(DbQueryBuilder.selectOrderRef(data.get("orderid")));
+				ref = (Map<String, Object>) ref.get("0");
+				System.out.println(ref);
+				if (data.get("qty").toString().equals(ref.get("quantity").toString())) {
+					System.out.println(INSTANCE + ": Delete order");
+					logger.logInfo(INSTANCE, "Delete order");
+					System.out.println("Löschen einfügen");
+				}
+				else {
+					System.out.println(INSTANCE + ": Change order");
+					logger.logInfo(INSTANCE, "Change order");
+					int refValue = Integer.parseInt(ref.get("quantity").toString());
+					int dataValue = Integer.parseInt(data.get("qty").toString());
+					int newValue = refValue - dataValue;
+					changeData(DbQueryBuilder.updateOrder(data.get("orderid"), newValue));
+					ref = selectData(DbQueryBuilder.selectOrderStorageRef(data.get("storage")));
+					ref = (Map<String, Object>) ref.get("0");
+					refValue = Integer.parseInt(ref.get("quantity").toString());
+					newValue = refValue - dataValue;
+					changeData(DbQueryBuilder.updateStorage(data.get("storage"), newValue));
+					System.out.println(INSTANCE + ": Change order successful");
+					logger.logInfo(INSTANCE, "Change order successful");
+				}
+			} catch (SQLException e) {
+				sqlException(e);
+			}
+		}
+		
+		// Handle the orderSmartlabel state. If no order exist then a new one will created.
+		if ("orderSmartlabel".equals(header)) {
+			System.out.println("New order");
+			logger.logInfo(INSTANCE, "New order from Smartlabel: " + data.get("smartlabelSN"));
+			try {
+				Map<String, Object> ref = selectData(DbQueryBuilder.selectOrderSmartlabel(data.get("smartlabelSN")));
+				ref = (Map<String, Object>) ref.get("0");
+				System.out.println(ref);
+				logger.logInfo(INSTANCE, "Check order data: " + ref);
+				
+				if (ref.get("order") == null) {
+					logger.logInfo(INSTANCE, "Insert new order");
+					changeData(DbQueryBuilder.insertNewOrder(
+						ref.get("materialno"), ref.get("smartlabelid"), ref.get("deliveryid"), ref.get("orderqty")
+					));
+					System.out.println(INSTANCE + ": New order successfully inserted");
+					logger.logInfo(INSTANCE, "New order successfully inserted");
+				}
+				
+				body = requestDataSmartlabel(data.get("smartlabelSN"));
+				body.put("smartlabelSN", data.get("smartlabelSN"));
+				headerResponse = "response";
+				topic = "/smartlabel/smartlabel/" + data.get("smartlabelSN");
+				logger.logInfo(INSTANCE, "Response data smartlabel successful");				
+			} catch (SQLException e) {
+				sqlException(e);
+			}
+		}
+		
+		Map<String, Object> answer = new HashMap<>();
+		answer.put("header", headerResponse);
+		answer.put("data", body);
+		dataService.publish(topic, answer);
 	}
 	
 	private Map<String, Object> requestOrder() {
@@ -74,10 +143,10 @@ public class DataRepository implements Runnable {
 		return body;
 	}
 	
-	private Map<String, Object> requestDataSmartlabel(String smartlabelSN) {
+	private Map<String, Object> requestDataSmartlabel(Object smartlabelSN) {
 		Map<String, Object> body = null;
 		try {
-			body = selectData(DbQueryBuilder.selectSmartlabelInit(smartlabelSN));
+			body = selectData(DbQueryBuilder.selectSmartlabelData(smartlabelSN));
 			logger.logInfo(INSTANCE, "Select Data from DB successful");
 		} catch (SQLException e) {
 			sqlException(e);
@@ -102,16 +171,19 @@ public class DataRepository implements Runnable {
 		return body;
 	}
 	
-	private void insertData() {
-		
-	}
-	
-	private void deleteData() {
-		
-	}
-	
-	private void updateData() {
-		
+	private void changeData(String query) throws SQLException {
+		int check;
+		try {
+			System.out.println("changeData started");
+			dbManager.connect();
+			check = dbManager.executeUpdate(query);
+		} catch (SQLException e) {
+			System.out.println(INSTANCE + ": Execute query failed");
+			logger.logError(INSTANCE, "Execute query failed");
+			throw e;
+		} finally {
+			if (dbManager != null) dbManager.close();
+		}
 	}
 	
 	private Map<String, Object> resultSetToMap(ResultSet resultSet) throws SQLException {
